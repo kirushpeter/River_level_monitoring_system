@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+
+    padding: 0;
+
+    display: flex; /* Make the body element use flexbox */
+
+    justify-content: center; /* Align content horizontally at center */
+
+    align-items: center; /* Align content vertically at center (optional) */
+
+    min-height: 100vh; /* Set minimum height for full viewport */
+
+    background-color: #333;
+  }
+  
+  .container {
+    
+    display: flex; /* Make the container use flexbox */
+
+    flex-direction: column; /* Stack steps vertically */
+  }
+  
+  .step {
+
+    display: flex; /* Make each step use flexbox */
+
+  }
+  
+  .circle {
+
+    width: 100px; /* Set width of each circle */
+
+    height: 100px; /* Set height of each circle (equal to width for a circle) */
+
+    background-color: bisque; /* Set background color for circles */
+
+    border-radius: 50%; /* Make the circles round */
+
+    margin: 10px; /* Add margin for spacing */
+  }
+  
+
+  .tittle {
+
+    width: 100%;
+
+    text-align: center;
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+  }
+
+  .tittle h1 {
+
+    color: aqua;
+
+  }
