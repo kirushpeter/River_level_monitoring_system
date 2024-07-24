@@ -2,7 +2,8 @@ body {
   margin: 0;
   padding: 0;
   display: flex; /* Make the body element use flexbox */
-  justify-content: center; /* Align content horizontally at center */
+  flex-direction: column;
+  justify-content: space-between; /* Align content horizontally at center */
   align-items: center; /* Align content vertically at center (optional) */
   min-height: 100vh; /* Set minimum height for full viewport */
   background-color: #333;
@@ -13,6 +14,16 @@ body {
   flex-direction: column; /* Stack steps vertically */
   align-items: center;
   justify-content: space-evenly;
+  flex: 1;
+}
+
+footer {
+  background-color: #515050;
+  color: rgb(215, 215, 215);
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
 }
 
 .step {
@@ -51,7 +62,6 @@ body {
 .title {
   width: 100%;
   text-align: center;
-  margin-bottom: 5vh;
 }
 
 .title h1 {
