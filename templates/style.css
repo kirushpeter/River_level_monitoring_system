@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex; /* Make the body element use flexbox */
+  flex-direction: column;
+  justify-content: space-between; /* Align content horizontally at center */
+  align-items: center; /* Align content vertically at center (optional) */
+  min-height: 100vh; /* Set minimum height for full viewport */
+  background-color: #333;
+}
+
+.container {
+  display: flex; /* Make the container use flexbox */
+  flex-direction: column; /* Stack steps vertically */
+  align-items: center;
+  justify-content: space-evenly;
+  flex: 1;
+}
+
+footer {
+  background-color: #515050;
+  color: rgb(215, 215, 215);
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.step {
+  width: 90vw;
+}
+
+.first {
+  display: flex; /* Make the container use flexbox */
+  flex-direction: row; /* Stack steps vertically */
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.second {
+  display: flex; /* Make the container use flexbox */
+  flex-direction: row; /* Stack steps vertically */
+  align-items: center;
+  justify-content: center;
+}
+
+.third {
+  display: flex; /* Make the container use flexbox */
+  flex-direction: row; /* Stack steps vertically */
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.circle {
+  width: 70px; /* Set width of each circle */
+  height: 70px; /* Set height of each circle (equal to width for a circle) */
+  background-color: bisque; /* Set background color for circles */
+  border-radius: 50%; /* Make the circles round */
+  margin: 5px; /* Add margin for spacing */
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+}
+
+.title h1 {
+  color: aqua;
+}
