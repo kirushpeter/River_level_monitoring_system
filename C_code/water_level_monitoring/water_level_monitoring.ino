@@ -1,3 +1,4 @@
+ultrasonic sensor
 
 /*
 
@@ -87,6 +88,11 @@ const int echo_three = 6;
 const int SOUND_SPEED = 0.034;
 
 
+const int trig_four = 10;
+
+const int echo_four = 
+
+
 
 void setup() {
     
@@ -118,6 +124,9 @@ void setup() {
     
     pinMode(trig_three, OUTPUT);
     pinMode(echo_three, INPUT);
+
+    pinMode(trig_four, OUTPUT);
+    pinMode(echo_four, INPUT);
     
     pinMode(led_six, OUTPUT);
     
@@ -166,6 +175,7 @@ void connectToMQTT() {
             mqtt_client.publish(mqtt_topic, "Hi EMQX I'm ESP32 ^^"); // Publish message upon successful connection
             
         } else {
+
             Serial.print("Failed, rc=");
             
             Serial.print(mqtt_client.state());
@@ -194,6 +204,8 @@ void loop() {
     float distanceTank2 = getDistance(trig_two, echo_two);
     
     float distanceTank3 = getDistance(trig_three, echo_three);
+
+    float distanceTank4 = getDistance(trig_four, echo_four);
     
     // Print the distances for each tank
     
@@ -213,9 +225,16 @@ void loop() {
     Serial.print(distanceTank3);
     Serial.println(" cm");
 
+
+    Serial.print("Tank 4 Distance: ");
+    Serial.print(distanceTank4);
+    Serial.println(" cm");
+
   mqtt_client.publish(tank1_topic, String(distanceTank1).c_str(), true);
   mqtt_client.publish(tank2_topic, String(distanceTank2).c_str(), true);
   mqtt_client.publish(tank3_topic, String(distanceTank3).c_str(), true);
+  mqtt_client.publish(tank4_topic, String(distanceTank4).c_str(), true);
+    
     
     
     delay(1000); // Wait for 1 second before next reading
